@@ -66,10 +66,12 @@
 
     const init = () => {
       const sendButton = document.querySelector('#send');
-      let type = document.querySelector('#type').value;
-      let page = document.querySelector('#page').value;
+      let type = document.querySelector('#type');
+      let page = document.querySelector('#page');
 
-      const send = () => sendFetchRequest(page, type);
+      const send = () => {
+        sendFetchRequest(page.value, type.value);
+      }
 
       sendButton.addEventListener('click', send);
     };
