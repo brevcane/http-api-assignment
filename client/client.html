@@ -38,6 +38,8 @@
         const contentType = response.headers.get('Content-Type');
         const content = document.querySelector('#content');
 
+        console.log(resText);
+
         const p = document.createElement('p');
 
         if(contentType === 'text/xml') {
